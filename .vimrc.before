@@ -1,0 +1,4 @@
+let mapleader = ","
+call janus#disable_plugin('gundo')
+call janus#disable_plugin('vdebug')
+filetype plugin on

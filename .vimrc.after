@@ -1,0 +1,13 @@
+let mapleader=","
+set showcmd
+set autoindent
+set noexpandtab
+set tabstop=2
+set shiftwidth=2
+filetype plugin indent off
+set tags=./tags;$HOME
+color desert
+set hidden
+filetype plugin on
+let g:buffergator_autoexpand_on_split = 0
+set shellcmdflag=-lic
