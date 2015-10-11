@@ -1,0 +1,37 @@
+#!/bin/sh
+# cmdline util to append notes to devnotes from bash
+# lives in ~/bin
+# export PATH=$PATH:~/bin in yr .bash_profile
+# chmod a+x nt
+
+# EXAMPLE:
+# nt pollard "did stuff"
+
+# Extend by adding cases below
+
+# GET ARGS
+PJ=$1
+shift
+MSG=$*
+
+
+# PLANNING
+# echo "Project Name:"
+# echo "${PJ}"
+# echo "Message to append:"
+# echo "$MSG"
+
+# DO WERK
+if [ "$PJ" = "pollard" ]
+then
+	echo "$MSG" >> /Users/sliechty/dev/freeform-portland/pollard/devnotes.md
+elif [ "$PJ" = "help" ]
+then
+	DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+	echo "$DIR"
+else
+	echo "NOOP"
+fi
+
+
+# End of file
