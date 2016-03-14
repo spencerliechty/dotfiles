@@ -8,7 +8,7 @@ HISTSIZE=10000
 export PATH=$PATH:/usr/texbin
 alias php='/usr/local/opt/php54/bin/php'
 
-alias ls='ls -Gp'
+alias ls='ls -Glathp'
 
 
 alias rs="rsync -ruhi --inplace /Users/sliechty/innography/app/ sliechty@staging-direct.innography.com:/sandboxes/sliechty/app/ --exclude '.git'"
@@ -38,6 +38,8 @@ alias act_tdd='pushd ~/Virtualenvs/tdd/bin/ && source activate && popd'
 alias kf='ps -ef | grep firefox | awk '"'"'{ print $2 }'"'"' | sed -e '"'"'$ d'"'"' | xargs sudo kill'
 # Run Functional tests from /tdd/superlists
 alias funk='kf; pushd ~/django_tdd/tdd/superlists/; pm test functional_tests.tests; popd; kf'
+
+export PYTHONDONTWRITEBYTECODE=true
 
 alias alert='terminal-notifier -title "Terminal" -message "Task finished"'
 
@@ -106,3 +108,15 @@ print_before_the_prompt() {
 PROMPT_COMMAND=print_before_the_prompt
 PS1='->'
 export PATH=/usr/local/bin:$PATH
+
+alias vim="/usr/local/bin/vim"
+
+export NVM_DIR="/Users/sliechty/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+alias gitwatch='while :; do clear; git status; sleep 2; done'
+alias lintwatch='while :; do clear; node_modules/.bin/eslint src/; sleep 2; done'
+
+nvm use 4
+
+source /usr/local/bin/virtualenvwrapper.sh
