@@ -1,3 +1,8 @@
+# MKTO CMDS
+alias cd-poc='cd /Users/sliechty/dev/workspaces/mercury/poc'
+alias cdmf='cd /Users/sliechty/dev/mercury-framework'
+# END MKTO CMDS
+
 set -o vi
 bind -m vi-insert C-c:vi-movement-mode
 bind -m vi-insert C-l:clear-screen
@@ -5,46 +10,9 @@ stty intr ^X
 shopt -s histappend
 HISTSIZE=10000
 
-export PATH=$PATH:/usr/texbin
-alias php='/usr/local/opt/php54/bin/php'
-
 alias ls='ls -Glathp'
 
-
-alias rs="rsync -ruhi --inplace /Users/sliechty/innography/app/ sliechty@staging-direct.innography.com:/sandboxes/sliechty/app/ --exclude '.git'"
-alias mphp="/Applications/MAMP/bin/php/php5.4.10/bin/php"
-alias mpear="/Applications/MAMP/bin/php/php5.4.10/bin/pear"
-alias sudo='sudo '
-
-# Git Stuff
-alias ngit='/usr/local/bin/git'
-
-# Git CheckOut Existing branch
-gcoe() {
-	git checkout master && git pull && git checkout APP-$1 && git pull && rs && git status
-}
-
-# Git CheckOut New branch
-gcon() {
- git checkout master && git pull && git checkout -b APP-$1 && git push -u origin APP-$1 && rs && git status
-}
-
-# Linode login
-alias ssh-lin='ssh -i /Users/sliechty/.ssh/linode sliechty@198.58.102.8'
-# tdd/python/django
-alias pm='python3 manage.py'
-alias act_tdd='pushd ~/Virtualenvs/tdd/bin/ && source activate && popd'
-#Kill Firefox instances
-alias kf='ps -ef | grep firefox | awk '"'"'{ print $2 }'"'"' | sed -e '"'"'$ d'"'"' | xargs sudo kill'
-# Run Functional tests from /tdd/superlists
-alias funk='kf; pushd ~/django_tdd/tdd/superlists/; pm test functional_tests.tests; popd; kf'
-
-export PYTHONDONTWRITEBYTECODE=true
-
-alias alert='terminal-notifier -title "Terminal" -message "Task finished"'
-
-alert_m () { /usr/bin/terminal-notifier -title 'Terminal' -message "$@"; }
-
+# PYTHON SHIZNIT
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
@@ -54,7 +22,6 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 syspip(){
 	PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
-
 
 
 
@@ -117,12 +84,8 @@ export NVM_DIR="/Users/sliechty/.nvm"
 alias gitwatch='while :; do clear; git status; sleep 2; done'
 alias lintwatch='while :; do clear; node_modules/.bin/eslint src/; sleep 2; done'
 
-alias cd-poc='cd /Users/sliechty/dev/workspaces/mercury/poc'
-alias cdmf='cd /Users/sliechty/dev/mercury-framework'
-
 alias setd='MY_CUR_DIR="$(pwd)"'
 alias cdd='cd $MY_CUR_DIR'
-
 
 nvm use 4
 
