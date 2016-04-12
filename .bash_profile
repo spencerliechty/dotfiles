@@ -117,6 +117,13 @@ export NVM_DIR="/Users/sliechty/.nvm"
 alias gitwatch='while :; do clear; git status; sleep 2; done'
 alias lintwatch='while :; do clear; node_modules/.bin/eslint src/; sleep 2; done'
 
+alias cd-poc='cd /Users/sliechty/dev/workspaces/mercury/poc'
+alias cdmf='cd /Users/sliechty/dev/mercury-framework'
+
+alias setd='MY_CUR_DIR="$(pwd)"'
+alias cdd='cd $MY_CUR_DIR'
+
+
 nvm use 4
 
 source /usr/local/bin/virtualenvwrapper.sh
