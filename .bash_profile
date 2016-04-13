@@ -1,6 +1,13 @@
 # MKTO CMDS
 alias cd-poc='cd /Users/sliechty/dev/workspaces/mercury/poc'
 alias cdmf='cd /Users/sliechty/dev/mercury-framework'
+
+ackmf() {
+    pushd /Users/sliechty/dev/mercury-framework
+    ack -i $1
+    popd
+}
+
 # END MKTO CMDS
 
 set -o vi
@@ -10,7 +17,8 @@ stty intr ^X
 shopt -s histappend
 HISTSIZE=10000
 
-alias ls='ls -Glathp'
+alias ls='ls -halpG'
+alias lst='ls -t'
 
 # PYTHON SHIZNIT
 export PIP_REQUIRE_VIRTUALENV=true
