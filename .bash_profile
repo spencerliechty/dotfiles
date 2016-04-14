@@ -95,6 +95,8 @@ alias lintwatch='while :; do clear; node_modules/.bin/eslint src/; sleep 2; done
 alias setd='MY_CUR_DIR="$(pwd)"'
 alias cdd='cd $MY_CUR_DIR'
 
+alias docker-start='bash --login "/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh"'
+
 nvm use 4
 
 source /usr/local/bin/virtualenvwrapper.sh
