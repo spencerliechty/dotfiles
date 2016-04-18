@@ -1,0 +1,38 @@
+execute pathogen#infect()
+
+syntax on
+
+let mapleader=","
+
+set autoindent
+set backspace=indent,eol,start
+set clipboard=unnamed
+set expandtab
+set hidden
+set hlsearch
+set linebreak
+set nolist
+set number
+set ruler
+set shiftwidth=2
+set showcmd
+set incsearch
+set smartcase
+set tabstop=2
+set wrap
+
+filetype plugin on
+filetype plugin indent off
+
+color desert
+
+" SYNTASTIC
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+" END SYNTASTIC
