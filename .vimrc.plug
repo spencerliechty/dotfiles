@@ -1,0 +1,22 @@
+let mapleader=","
+color desert
+
+set expandtab
+set tabstop=2
+set shiftwidth=2
+
+" clipboard
+set clipboard=unnamed
+
+
+" vimplug
+call plug#begin()
+
+Plug 'tpope/vim-sensible'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+Plug 'elmcast/elm-vim'
+
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+
+call plug#end()
