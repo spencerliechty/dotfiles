@@ -17,14 +17,29 @@ set ruler
 set shiftwidth=2
 set showcmd
 set incsearch
+set ignorecase
 set smartcase
 set tabstop=2
 set wrap
+set directory=~/.vim/swapfiles//
 
 filetype plugin on
-filetype plugin indent off
+filetype indent plugin on
 
 color desert
+
+" JANUS STATUSLINE
+if has("statusline") && !&cp
+  set laststatus=2  " always show the status bar
+
+  " Start the status line
+  set statusline=%f\ %m\ %r
+  set statusline+=Line:%l/%L[%p%%]
+  set statusline+=Col:%v
+  set statusline+=Buf:#%n
+  set statusline+=[%b][0x%B]
+endif
+" END JANUS STATUSLINE
 
 " SYNTASTIC
 set statusline+=%#warningmsg#
