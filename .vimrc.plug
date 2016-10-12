@@ -8,6 +8,11 @@ set tabstop=2
 set shiftwidth=2
 set showcmd
 
+" search
+set smartcase
+set incsearch
+set hlsearch
+
 " clipboard
 set clipboard=unnamed
 
