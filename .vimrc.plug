@@ -9,7 +9,8 @@ set shiftwidth=2
 set number
 set showcmd
 set directory=~/.vim/swapfiles//
-
+set wildmode=longest,list,full
+set wildmenu
 
 " search
 set smartcase
