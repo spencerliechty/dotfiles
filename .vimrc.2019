@@ -1,0 +1,52 @@
+let mapleader=","
+let maplocalleader=","
+
+color desert
+
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set number
+set showcmd
+set directory=~/.vim/swapfiles//
+set wildmode=longest,list,full
+set wildmenu
+set backspace=indent,eol,start
+set hidden
+set nolist
+set ruler
+
+
+
+set autoindent
+set smartindent
+
+" search
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set wrap
+
+" clipboard
+set clipboard=unnamed
+
+call plug#begin()
+
+Plug 'tpope/vim-sensible'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+
+call plug#end()
+
+
+" nerdtree
+map <leader>n :NERDTreeToggle<CR>
+
+" vim-jsx
+let g:jsx_ext_required = 0
