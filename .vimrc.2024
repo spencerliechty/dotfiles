@@ -1,0 +1,22 @@
+" kali linux
+
+syntax on
+
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set number
+
+set hidden
+set nolist
+set ruler
+
+set autoindent
+set smartindent
+
+" search
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set wrap
